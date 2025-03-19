@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <h2>Bai 1: tinh diem trung binh</h2>
+  <script src="bai1.js"></script>
+</div>
+
+<!--Bai 2: Chuyen doi nhiet do-->
+<div>
+  <h2>Bai 2: chuyen doi nhiet do</h2>
+  <input type="number" placeholder="Do C (Celsius)" id="c">
+  <button onclick="chuyendoi()">Converse</button>
+  <p id="result">Result</p>
+  <script src="bai2.js"></script>
+</div>
+
+<!--Bai 3: tinh dien tich hinh tron-->
+<div>
+  <h2>bai 3: chuong trinh tinh dien tich hinh tron</h2>
+  <input type="number" placeholder="Bán kính" id="R">
+  <button onclick="tinhDienTich()">Area is</button>
+  <p id="result2">result</p>
+  <script>
+    function tinhDienTich() {
+      const pi = 3.14;
+      var bankinh = document.getElementById('R').value;
+      var area = bankinh * bankinh * pi;
+      document.getElementById('result2').innerHTML ="Area is" + area;
+    }
+  </script>
+</div>
+
+<!--Bai 4: tinh chu vi hinh tron-->
+<div>
+  <h2>Bai 4: Chuong trinh tinh chu vi hinh tron</h2>
+  <input type="number" placeholder="Bán kính" id="R2">
+  <button onclick="tinhChuVi()">Area is</button>
+  <p id="result3">result</p>
+  <script>
+    function tinhChuVi() {
+      const pi = 3.14;
+      var bankinh = document.getElementById('R2').value;
+      var perimater = 2 * bankinh * pi;
+      document.getElementById('result3').innerHTML ="Perimeter is" + perimater;
+    }
+  </script>
+</div>
+</body>
+</html>
