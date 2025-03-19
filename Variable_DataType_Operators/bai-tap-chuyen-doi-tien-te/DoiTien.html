@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+  <style>
+    button {
+      background-color: blueviolet;
+      color: white;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 50%;
+
+    }
+    th, td {
+      padding: 10px 20px; /* Khoảng cách giữa nội dung và viền ô */
+      text-align: center;
+
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr style="text-align: center">
+      <td><b>Amount</b></td>
+      <td><b>From currency</b></td>
+      <td><b>To currency</b></td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td>
+        <input type="text" id = "amount" placeholder = "Nhap so tien">
+      </td>
+      <td>
+        <select id="from">
+          <option value="vnd">VNĐ</option>
+          <option value="usd">USD</option>
+        </select>
+      </td>
+
+      <td>
+        <select id="to">
+          <option value="vnd">VNĐ</option>
+          <option value="usd">USD</option>
+        </select>
+      </td>
+
+      <td>
+        <button onclick="MoneyConvert()">Convert</button>
+      </td>
+    </tr>
+  </table>
+<br/>
+<p id="result">Result: </p>
+  <script src="MoneyConvert.js"></script>
+</body>
+</html>
