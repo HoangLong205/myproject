@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--Bai 1-->
+<div>
+    <h2>Bai 1</h2>
+    <script>
+        let a = prompt("Enter number a: ");
+        let b = prompt("Enter number b: ");
+        let result
+        result = (a + b < 4) ? "Below" : "Over"
+        document.write(result);
+    </script>
+</div>
+
+<!--Bai 2-->
+<div>
+    <h2>Bai 2</h2>
+    <script>
+        let login = prompt("Enter login");
+        let message = (login == "Employee") ?
+            "Hello" :
+            (login == "Director") ?
+                "Greetings" :
+                (login == '') ?
+                    'No login' :
+                    '';
+        alert(message);
+        document.write(message);
+    </script>
+</div>
+
+</body>
+</html>
