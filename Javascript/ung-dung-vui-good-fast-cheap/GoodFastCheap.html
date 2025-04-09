@@ -48,6 +48,14 @@
             background-color: limegreen;
         }
 
+        input:checked + .slider.fast {
+            background-color: #d61b06;
+        }
+
+        input:checked + .slider.cheap {
+            background-color: aqua;
+        }
+
         input:checked + .slider:before {
             transform: translateX(40px);
         }
@@ -61,6 +69,50 @@
         </label>
         <span class="">GOOD</span>
     </div>
+
+    <div class="toggle">
+        <label class="switch">
+            <input type="checkbox" id="fast">
+            <span class="slider fast"></span>
+        </label>
+        <span class="">FAST</span>
+    </div>
+
+    <div class="toggle">
+        <label class="switch">
+            <input type="checkbox" id="cheap">
+            <span class="slider cheap"></span>
+        </label>
+        <span class="">CHEAP</span>
+    </div>
 </body>
 </html>
 
+<script>
+    var isGood = document.getElementById("good");
+    var isFast = document.getElementById("fast");
+    var isCheap = document.getElementById("cheap");
+
+    function HandleClick() {
+
+        if (isGood.checked && isFast.checked && isCheap.checked) {
+            if (this === isGood) {
+                isCheap.checked = false;
+            } else if (this === isFast) {
+                isGood.checked = false;
+            } else {
+                isFast.checked = false;
+            }
+        }
+
+
+
+
+    }
+
+    isGood.addEventListener("click", HandleClick)
+    isFast.addEventListener("click", HandleClick)
+    isCheap.addEventListener("click", HandleClick);
+
+
+</script>

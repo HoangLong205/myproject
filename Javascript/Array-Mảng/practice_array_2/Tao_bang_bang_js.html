@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table{
+      border: 2px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+  <table id="myTable" border="1">
+
+  </table>
+</body>
+</html>
+
+<script>
+  let table = document.getElementById("myTable");
+
+  for(let i = 0; i < 10; i++) {
+    let tr = document.createElement("tr");
+    table.appendChild(tr); //dua the tr vao trong table
+
+    for (var j = 0; j < 10; j++) {
+      let td = document.createElement("td");
+      tr.appendChild(td); // dua the td vao trong the tr
+
+      td.style.width = "20px";
+      td.style.height = "20px";
+
+
+      // if ((i % 2 === 0 && j % 2 === 0) || (i % 2 === 1 && j % 2 === 1)) {
+      //   td.style.backgroundColor = "lightgreen";
+      // } else {
+      //   td.style.backgroundColor = "yellow";
+      // }
+      td.style.backgroundColor = getRandomColor();
+    }
+  }
+
+  function getRandomColor() {
+    let a = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let c = Math.floor(Math.random() * 256);
+
+    return "rgb(" + a + "," + b + "," + c + ")";
+  }
+</script>
