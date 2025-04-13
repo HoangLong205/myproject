@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let a = parseInt(prompt("Enter a number"));
+    let count = 0;
+    let num = 2;
+
+    while (count < a) {
+        let isPrime = true;
+        for (let i = 2; i*i <= num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            document.write(num + "<br>");
+            count++;
+        }
+        num++;
+    }
+</script>
+</body>
+</html>
