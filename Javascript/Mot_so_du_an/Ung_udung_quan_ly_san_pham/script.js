@@ -74,7 +74,7 @@ function createProducts(event) {
     const productDescription = document.getElementById('productDescription').value;
     const productCategory = document.getElementById('productCategory').value;
 
-    if (productIndex !== 1) {
+    if (productIndex !== -1) {
         products[productIndex].name = productName;
         products[productIndex].price = productPrice;
         products[productIndex].description = productDescription;
