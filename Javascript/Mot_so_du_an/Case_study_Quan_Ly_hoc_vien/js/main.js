@@ -1,22 +1,27 @@
-let student = new Student('011', "Tạ Thị Thuỳ", '07/02/2002', 'Nữ','USSH112','https://toplist.vn/images/800px/tiem-chup-anh-the-lay-ngay-dep-nhat-o-hue-chu-de-da-duoc-nhan-cua-kieu-nguyen-317636.jpg' );
-let student1 = new Student('012','Đàm Kiều Trinh','05/02/2002','Nữ', 'USSK113','https://static2.yan.vn/YanNews/202005/202005220338210409-bee6f138-0608-4d56-bce3-27148a855654.png');
-let student2 = new Student('023','Bùi Thị Ánh','22/01/2002','Nữ','USSL132','https://znews-photo.zadn.vn/w660/Uploaded/lce_jwqqc/2019_05_30/61103071_2361422507447925_6222318223514140672_n_1.jpg');
-let arr =[student, student1, student2];
+let student = new Student('010', "Đồng Vũ Hoàng Long", '07/01/2005', 'Nam','USSH112','img/student/Long.jpg' );
+let student3 = new Student('011', "Hà Hoàng Long", '07/01/2005', 'Nam','USSH112','img/student/Long.jpg' );
+let student1 = new Student('012','Đàm Kiều Trinh','05/02/2002','Nữ', 'USSK113','img/student/Hehe-Boi-meme-7.jpg');
+let student2 = new Student('013','Bùi Thị Ánh','22/01/2002','Nữ','USSL132','img');
+let arr =[student, student3, student1, student2];
 let manage = new StudentManagement(arr);
 
-function deleteStudent(index) {
-    if (confirm(`Bạn có muốn xoá thông tin của ${manage.students[index].fullName} không`)) {
-        manage.delete(index);
-        manage.showList();
-
+function deleteStudentById(id) {
+    let index = manage.students.findIndex(student => student.id == id);
+    if (index !== -1) {
+        if (confirm(`Bạn có muốn xoá thông tin của ${manage.students[index].fullName} không`)) {
+            manage.delete(index);
+            manage.showList();
+        }
     }
 }
 
 let studentIndex = -1;
 
 //ham sua thong tin student
-function editStudent(index) {
-    let student = manage.findStudentIndex(index);
+function editStudentById(id) {
+    let student = manage.students.find(student => student.id == id);
+    let index = manage.students.findIndex(student => student.id == id);
+
     document.getElementById('id').value = student.id;
     document.getElementById('fullName').value = student.fullName;
     document.getElementById('gender').value = student.gender;
@@ -43,12 +48,20 @@ function updateStudent() {
 
 function createStudent(event) {
     event.preventDefault();
+
     let id = document.getElementById('id').value;
     let name = document.getElementById('fullName').value;
     let gender = document.getElementById('gender').value;
     let birthdate = document.getElementById('birthDate').value;
     let classroom = document.getElementById('class').value;
     let img = document.getElementById('img').value;
+
+    // Kiểm tra xem ID đã tồn tại hay chưa
+    let existingStudent = manage.students.find(student => student.id === id);
+    if (existingStudent) {
+        alert(`ID ${id} đã tồn tại. Vui lòng nhập một ID khác.`);
+        return; // Dừng quá trình thêm học sinh nếu ID đã tồn tại
+    }
 
     let student = new Student(id,name,gender,birthdate,classroom,img);
     manage.addStudent(student);

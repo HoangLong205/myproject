@@ -142,3 +142,31 @@ form input, form select {
 #add:hover, #edit:hover {
     background-color: #004c99;
 }
+
+.deleteBtn {
+    width: 70px;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0066cc;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editBtn {
+    width: 45%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0066cc;
+    color: white;
+    cursor: pointer;
+}
+
+.deleteBtn:hover, .editBtn:hover{
+    background-color: #0b3159;
+}

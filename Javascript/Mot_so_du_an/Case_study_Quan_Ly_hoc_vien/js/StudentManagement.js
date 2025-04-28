@@ -15,22 +15,8 @@ class StudentManagement{
             <td>${filterList[i].classroom}</td>
             <td><img src="${filterList[i].img}" alt="student image" style="width: 100px; height: auto;"></td>
                 <td>
-                    <button onclick="deleteStudent(${i})" style="width: 60%;
-    padding: 10px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #0066cc;
-    color: white;
-    cursor: pointer;">DELETE</button>
-                    <button onclick="editStudent(${i})" style="width: 45%;
-    padding: 10px;
-    margin-top: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #0066cc;
-    color: white;
-    cursor: pointer;">EDIT</button>
+                    <button class="deleteBtn" onclick="deleteStudentById('${filterList[i].id}')">DELETE</button>
+                    <button class="editBtn" onclick="editStudentById('${filterList[i].id}')">EDIT</button>
                 </td>
             </tr>`
         }
