@@ -46,8 +46,9 @@ function updateStudent() {
     clear();
 }
 
+//tạo học viên mới
 function createStudent(event) {
-    event.preventDefault();
+    event.preventDefault(); //ngăn không cho trang web reload
 
     let id = document.getElementById('id').value;
     let name = document.getElementById('fullName').value;
