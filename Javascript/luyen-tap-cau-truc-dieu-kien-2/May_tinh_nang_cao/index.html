@@ -8,13 +8,34 @@
 <body>
 <input type="text" id="input">
 
-<table>
+<table class= "button">
   <tr>
-    <td><button type="button" onclick="" name="btn" value="1">1</button></td>
-    <td><button type="button" onclick="" name="btn" value="2">2</button></td>
-    <td><button type="button" onclick="" name="btn" value="3">3</button></td>
-    <td><button type="button" onclick="" name="add" value="+">+</button></td>
+    <td><button type="button" onclick="inputVal(this.value)" name="btn" value="1">1</button></td>
+    <td><button type="button" onclick="inputVal(this.value)" name="btn" value="2">2</button></td>
+    <td><button type="button" onclick="inputVal(this.value)" name="btn" value="3">3</button></td>
+    <td><button type="button" onclick="inputVal(this.value)" name="op" value="+">+</button></td>
   </tr>
+
+    <tr>
+        <td><button type="button" onclick="inputVal(this.value)" name="btn" value="4">4</button></td>
+        <td><button type="button" onclick="inputVal(this.value)" name="btn" value="5">5</button></td>
+        <td><button type="button" onclick="inputVal(this.value)" name="btn" value="6">6</button></td>
+        <td><button type="button" onclick="inputVal(this.value)" name="op" value="-">-</button></td>
+    </tr>
+
+    <tr>
+        <td><button type="button" onclick="inputVal(this.value)" name="btn" value="7">7</button></td>
+        <td><button type="button" onclick="inputVal(this.value)" name="btn" value="8">8</button></td>
+        <td><button type="button" onclick="inputVal(this.value)" name="btn" value="9">9</button></td>
+        <td><button type="button" onclick="inputVal(this.value)" name="op" value="*">*</button></td>
+    </tr>
+
+    <tr>
+        <td><button type="button" onclick="xoa();"> AC </button></td>
+        <td><button type="button" name="btn" onclick="inputVal(this.value)"> 0 </button></td>
+        <td><button  name= "reusult" onclick="result();"> = </button></td>
+        <td><button type="button" name="op" value ="/" onclick="inputVal(this.value)"> / </button></td>
+    </tr>
 </table>
 
 <script src="script.js"></script>
