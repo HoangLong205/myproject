@@ -25,4 +25,30 @@ function addNewBook() {
     manage.addBook(book);
     manage.showList();
 }
+
+function borrowBook() {
+    let id = prompt("Nhập id sách muốn mượn: ")
+    let book = books.find(bId => bId.id === parseInt(id));
+    if (book) {
+        if (book.borrow()) {
+            alert("Đã mượn được sách");
+        } else {
+            alert("Sách đã hết")
+        }
+    }
+    manage.showList();
+}
+
+function addExistBook() {
+    let id = prompt("Nhập mã số sách đã có:");
+    let quantity = parseInt(prompt("Thêm bao nhiêu quyển?"));
+
+    let book = books.find(b => b.id === parseInt(id));
+    if (book) {
+        book.increaseQuantity(quantity);
+        manage.showList();
+    } else {
+        alert("Không tìm thấy sách.");
+    }
+}
 manage.showList();

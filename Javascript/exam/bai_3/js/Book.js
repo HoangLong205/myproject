@@ -4,7 +4,7 @@ class Book{
         this.name = name;
         this.year = parseInt(year);
         this.quantity = parseInt(quantity);
-        this.status = quantity > 0;
+        this.status = this.quantity > 0;
     }
 
     increaseQuantity() {
@@ -15,7 +15,9 @@ class Book{
     borrow() {
         if (this.quantity > 0) {
             this.quantity--;
-            if (this.quantity === 0) this.status = false;
+            this.status = this.quantity > 0;
+            return true;
         }
+        return false;
     }
 }
