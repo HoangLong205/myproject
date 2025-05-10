@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // constructor function
+    // function Person(name, age, weight) {
+    //
+    //     this.say = function () {
+    //         console.log('Hello, I am ' + name)
+    //     }
+    //
+    //     this.move = function () {
+    //         console.log('Walking...')
+    //     }
+    // }
+    //
+    // const person1 = new Person('Long', 20, 81)
+    //
+    // person1.say();
+    // person1.move();
+    //
+    // // object literal
+    // const person2 = {
+    //     name: 'Long',
+    //     age: 20,
+    //     weight: 81,
+    //     say: function () {
+    //         console.log(`Hello, I am  ${this.name} `)
+    //     },
+    //     move: function () {
+    //         console.log('Walking...')
+    //     }
+    //
+    // }
+
+    class Circle  {
+        constructor() {
+            this.radius = 10;
+            this.color = 'red'
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getArea() {
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+
+    const circle = new Circle();
+    console.log(circle.getArea());
+    console.log(circle.color);
+</script>
+</body>
+</html>

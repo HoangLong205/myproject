@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //bai1
+    let a = parseFloat(prompt("nhap so a"));
+    let b = parseFloat(prompt("nhap so b"));
+
+    if (a % b == 0) {
+        alert("a chia het cho b")
+    }
+    else{
+        alert("a khong chia het cho b")
+    }
+
+    //bai2
+    let age = parseFloat(prompt("nhap tuoi cua ban"))
+
+    if (age < 0) {
+        alert("Error!")
+    }
+
+    if (age < 15) {
+        alert("khong du dieu kien vao lop 10")
+    }else {
+        alert("du dieu kien vao lop 10")
+    }
+
+    //bai3
+    let num = parseFloat(prompt("Nhap mot so bat ki"));
+
+    if (num < 0) {
+        alert("num nho hon 0");
+    }
+    if (num === 0) {
+        alert("num bang 0");
+    }
+    if (num > 0) {
+        alert("num lon hon 0");
+    }
+
+    //bai4
+    let x = parseFloat(prompt("Nhập số thứ nhất:"));
+    let y = parseFloat(prompt("Nhập số thứ hai:"));
+    let z = parseFloat(prompt("Nhập số thứ ba:"));
+
+    let max = 0;
+
+    if (x >= y && x >= z) {
+        max = x;
+    } else if (y >= x && y >= z) {
+        max = y;
+    }
+    else {
+        max = z;
+    }
+
+    consolo.log(max);
+    alert("So lon nhat la: " + max);
+
+    //bai5
+    let test = parseFloat(prompt("Nhập diem kiem tra:"));
+    let midTest = parseFloat(prompt("Nhập diemm giua ki:"));
+    let finalTest = parseFloat(prompt("Nhập diem cuoi ki:"));
+
+    let avg = (test + midTest + finalTest) / 3;
+
+    if (avg < 4) {
+        alert("Xep loai F")
+    } else if (avg <= 5.5) {
+        alert("xep loai D");
+    } else if (avg <= 6.5) {
+        alert("xep loai C");
+    }   else if (avg <= 8) {
+        alert("Xep loai B");
+    } else {
+        alert("Xep loai A")
+    }
+
+</script>
+</body>
+</html>

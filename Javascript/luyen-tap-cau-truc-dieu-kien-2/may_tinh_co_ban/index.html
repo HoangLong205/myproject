@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính cơ bản</title>
+</head>
+<body>
+<div>
+<input type="text" id="input1" placeholder="Nhập số thứ nhất">
+<input type="text" id="input2" placeholder="Nhập số thứ hai">
+    </div>
+
+<div>
+    <input type="button" value="Addition(+)" onclick="add()">
+    <input type="button" value="Subtraction" onclick="sub()">
+    <input type="button" value="Multiplication(x)" onclick="multi()">
+    <input type="button" value="Divide(/)" onclick="div()">
+</div>
+
+<h3>Result:</h3>
+<div id="result"></div>
+<script>
+
+    function add() {
+        let a = parseInt(document.getElementById("input1").value);
+        let b = parseInt(document.getElementById("input2").value);
+        let result = a + b;
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function sub() {
+        let a = parseInt(document.getElementById("input1").value);
+        let b = parseInt(document.getElementById("input2").value);
+        let result = a - b;
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function multi() {
+        let a = parseInt(document.getElementById("input1").value);
+        let b = parseInt(document.getElementById("input2").value);
+        let result = a * b;
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function div() {
+        let a = parseInt(document.getElementById("input1").value);
+        let b = parseInt(document.getElementById("input2").value);
+        let result = a / b;
+        document.getElementById("result").innerHTML = result;
+    }
+
+
+</script>
+</body>
+</html>

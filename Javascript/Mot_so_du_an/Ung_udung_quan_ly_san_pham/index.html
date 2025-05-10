@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Add new Products</h2>
+    <form action="" onsubmit="createProduct(event)">
+        <input type="text" name="productName" id="productName" placeholder="enter the product name" required> <br>
+        <input type="number" name="productPrice" id="productPrice" placeholder="price" required> <br>
+        <textarea name="productDescription" id="productDescription" placeholder="Content"></textarea> <br>
+        <select name="productCategory" id="productCategory" required>
+            <option >--- Select category ---</option>
+            <option >Smartphone</option>
+            <option >Tablet</option>
+            <option >PC/Laptop</option>
+            <option >TV</option>
+            <option>Google</option>
+        </select> <br>
+        <button type="submit" id="btnAdd" onclick="createProducts(event)">Add</button>
+    </form>
+    <h2>Dislay all products</h2>
+<div class="heading">
+    <strong id="productCount">SL products</strong>
+</div>
+<table>
+    <thead>
+    <tr>
+        <th>Product Name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Category</th>
+        <th>EDIT</th>
+        <th>DELETE</th>
+    </tr>
+    </thead>
+    <tbody id="productList"></tbody>
+</table>
+
+    <script src="script.js"></script>
+</body>
+</html>

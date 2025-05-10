@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="input" onchange="countVowels()">
+
+    <div id="result">0</div>
+
+    <script>
+
+    function countVowels() {
+        let str = document.getElementById("input").value;
+        let arr = Array.from(str);
+
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].toLowerCase() === 'a'
+                || arr[i].toLowerCase() === 'o'
+                || arr[i].toLowerCase() === 'i'
+                || arr[i].toLowerCase() === 'e' || arr[i].toLowerCase() === 'u'
+            ) {
+               count++;
+            }
+        }
+
+        result.innerHTML = count;
+    }
+
+
+
+    </script>
+</body>
+</html>

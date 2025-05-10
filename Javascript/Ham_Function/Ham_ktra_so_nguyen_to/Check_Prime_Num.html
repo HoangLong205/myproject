@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check Prime Number</title>
+</head>
+<body>
+<script>
+  function checkPrimeNum(num) {
+    if (num <= 1) {
+      return num + " không phải số nguyên tố";
+    }
+      if (num === 2) {
+        return num + " là số nguyên tố";
+      }
+      for (let i = 2; i*i <= num; i++ ) {
+        if (num % i === 0) {
+          return num + " không phải số nguyên tố";
+        }
+      }
+    return num + " là số nguyên tố";
+
+  }
+
+  var num = parseFloat(prompt("Nhập số cần kiểm tra:"));
+  alert(checkPrimeNum(num));
+</script>
+</body>
+</html>

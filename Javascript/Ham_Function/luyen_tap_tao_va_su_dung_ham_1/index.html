@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập JavaScript</title>
+</head>
+<body>
+<h1>Bài Tập JavaScript</h1>
+
+<script>
+    // Bài 1: Hàm không tham số
+    function alertMessage() {
+        alert("Xin chào");
+    }
+    alertMessage(); // Gọi hàm
+
+    // Bài 2: Hàm có 1 tham số
+    function increaseNumber(num) {
+        return num + 1;
+    }
+    let result2 = increaseNumber(5); // Ví dụ truyền số 5
+    document.write("<p>Kết quả bài 2: " + result2 + "</p>");
+
+    // Bài 3: Hàm có 2 tham số
+    function compareAndSum(a, b) {
+        if (a > b) {
+            alert("Tham số thứ nhất lớn hơn tham số thứ hai");
+        } else {
+            return a + b;
+        }
+    }
+    let result3 = compareAndSum(3, 4); // Ví dụ
+    if (result3 !== undefined) {
+        document.write("<p>Kết quả bài 3: " + result3 + "</p>");
+    }
+
+    // Bài 4: Thêm alert
+    function addNumbers() {
+        let firstNum = 4;
+        let secondNum = 8;
+        let result = firstNum + secondNum;
+        alert("Giá trị result trong hàm: " + result);
+        return result;
+    }
+    let result = 0;
+    alert("Giá trị result trước khi gọi hàm: " + result);
+    result = addNumbers();
+    alert("Giá trị result sau khi gọi hàm: " + result);
+
+    // Bài 5: Sử dụng mảng và hàm
+    const stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    const constellations = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function findConstellation(starName) {
+        for (let i = 0; i < stars.length; i++) {
+            if (stars[i].toLowerCase() === starName.toLowerCase()) {
+                return constellations[i];
+            }
+        }
+        return null;
+    }
+
+    let star = prompt("Nhập tên một ngôi sao:");
+    let constellation = findConstellation(star);
+
+    if (constellation) {
+        document.write("<p>Ngôi sao " + star + " thuộc chòm sao: " + constellation + "</p>");
+    } else {
+        document.write("<p>Không tìm thấy chòm sao tương ứng cho: " + star + "</p>");
+    }
+</script>
+</body>
+</html>

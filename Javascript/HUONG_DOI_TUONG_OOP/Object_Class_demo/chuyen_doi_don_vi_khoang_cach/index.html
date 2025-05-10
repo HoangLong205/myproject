@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+     <p id="footToMeter"></p> <br>
+    <p id="meterToFoot"></p>
+
+     <script>
+         function footToMeter(foot) {
+             return foot * 0.305;
+         }
+
+         function meterToFoot(meter) {
+             return meter * 3.279;
+         }
+
+         let foot = parseFloat(prompt("Nhap foot"));
+         let toMeter = footToMeter(foot);
+         let meter = parseFloat(prompt("Nhap meter"));
+         let toFoot = meterToFoot(meter);
+
+         document.getElementById('footToMeter').innerHTML = foot + " foot = " + toMeter + " meter"
+         document.getElementById('meterToFoot').innerHTML = meter + " meter = " + toFoot + " foot"
+     </script>
+</body>
+</html>
